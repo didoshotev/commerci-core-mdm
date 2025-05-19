@@ -34,18 +34,50 @@ export default function Hero() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/demo"
-                className="px-6 py-3 bg-primary hover:bg-primary-light text-white rounded-lg transition shadow-lg hover:shadow-xl text-center font-medium"
-              >
-                Request Demo
-              </Link>
+              <div className="relative">
+                <Link
+                  href="/demo"
+                  className="px-6 py-3 bg-primary hover:bg-primary-light text-white rounded-lg transition shadow-lg hover:shadow-xl text-center font-medium w-full block"
+                >
+                  Request Demo
+                </Link>
+                {/* Coming Soon Badge */}
+                <div className="absolute -top-3 -right-3 bg-amber-400 text-amber-900 px-3 py-1 rounded-full text-xs font-bold shadow-md transform rotate-3 border border-amber-500">
+                  Coming Soon
+                </div>
+              </div>
               <Link
                 href="#how-it-works"
                 className="px-6 py-3 bg-gray-100 hover:bg-gray-200 text-foreground rounded-lg transition text-center font-medium"
               >
                 How It Works
               </Link>
+            </div>
+
+            {/* Beta Information Banner */}
+            <div className="mt-6 p-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-600">
+              <div className="flex items-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <p>
+                  <span className="font-medium">Early Access:</span>{" "}
+                  CommerciCore is currently in development. We're building the
+                  platform and invite you to join our waitlist for exclusive
+                  early access when we launch.
+                </p>
+              </div>
             </div>
 
             <div className="mt-10">
